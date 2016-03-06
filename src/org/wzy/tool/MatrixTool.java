@@ -37,6 +37,20 @@ public class MatrixTool {
 		}
 		return results;
 	}
+	public static double[] MatrixRightDotVector(double[][] m, double[] v)
+	{
+		if(m.length<=0||m[0].length!=v.length)
+			return null;
+		double[] results=new double[m.length];
+		for(int i=0;i<results.length;i++)
+		{
+			for(int j=0;j<v.length;j++)
+			{
+				results[i]+=v[j]*m[i][j];
+			}
+		}
+		return results;
+	}
 	
 	public static double DotMulti(double[][] a,double[][] b)
 	{

@@ -8,11 +8,12 @@ public class RandomTrainingThread {
 	private int MAX_STEPS;
 	private Random rand=new Random();
 	
+	
 	public void Training(int startEntity)
 	{
 		for(int i=0;i<MAX_STEPS;i++)
 		{
-			int[] predecessors=KNTraining.uniqueInstanse.getReverse_knGraph()[startEntity];
+			int[] predecessors=KNTraining.uniqueInstanse.reverse_knGraph[startEntity];
 			if(predecessors==null||predecessors.length<1)
 			{
 				startEntity=restart();
